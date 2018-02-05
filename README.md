@@ -1,6 +1,7 @@
 # Scrapapp
 requirments:
    use pip install -r requirments.txt
+   must run localy mongodb server or provide setting in AmazonSpider settings.py for DB configs
 run:
   1- run scrapyd in AmazonSpider directory 
   2- run python app.py in SpiderApi directory
