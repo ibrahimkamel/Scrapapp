@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amazon Crawler</title>
+</head>
+<!-- BOOTSTRAP -->
+<body>
+	<h1>Enter Amazon Product Url</h1>
+	<form action="{{ url_for('amazon_api')}}" method="POST">
+		<textarea rows="6" name="urls"></textarea>
+		<button type="submit">Crawl</button>
+	</form>
+	
+</body>
+</html>

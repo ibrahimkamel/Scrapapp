@@ -1,0 +1,61 @@
+2018-02-05 15:51:18 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: AmazonSpider)
+2018-02-05 15:51:18 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.3.1, w3lib 1.19.0, Twisted 17.9.0, Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:19:30) [MSC v.1500 32 bit (Intel)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.10586
+2018-02-05 15:51:18 [scrapy.crawler] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'AmazonSpider.spiders', 'SPIDER_MODULES': ['AmazonSpider.spiders'], 'LOG_FILE': 'logs\\default\\amazonspider\\a1bf3cc00a7b11e89da2ec9a7459f54b.log', 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36', 'BOT_NAME': 'AmazonSpider'}
+2018-02-05 15:51:18 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-02-05 15:51:18 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-02-05 15:51:18 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-02-05 15:51:18 [scrapy.middleware] INFO: Enabled item pipelines:
+['AmazonSpider.pipelines.MongoDBPipline']
+2018-02-05 15:51:18 [scrapy.core.engine] INFO: Spider opened
+2018-02-05 15:51:18 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-02-05 15:51:18 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-02-05 15:51:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/Amazon-Echo-Dot-Portable-Bluetooth-Speaker-with-Alexa-Black/dp/B01DFKC2SO/> (referer: None)
+2018-02-05 15:51:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.com/Amazon-Echo-Dot-Portable-Bluetooth-Speaker-with-Alexa-Black/dp/B01DFKC2SO/>
+{'metadata': [{'Description': [u'Echo Dot (2nd Generation) is a hands-free, voice-controlled device that uses Alexa to play music, control smart home devices, make calls, send and receive messages, provide information, read the news, set music alarms, read audiobooks from Audible, control Amazon Video on Fire TV, and more'],
+ 'name': [u'Echo Dot (2nd Generation) - Black'],
+ 'num_of_reviews': [u'92,068'],
+ 'price': [u'$39.99'],
+ 'review': [u'4.3'],
+ 'seller': [u'Amazon']}],
+ 'platform': ['Amazon'],
+ 'timestamp': [datetime.datetime(2018, 2, 5, 13, 51, 22, 828000)],
+ 'url': ['https://www.amazon.com/Amazon-Echo-Dot-Portable-Bluetooth-Speaker-with-Alexa-Black/dp/B01DFKC2SO/']}
+2018-02-05 15:51:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-02-05 15:51:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 361,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 234810,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 2, 5, 13, 51, 22, 959000),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 2, 5, 13, 51, 18, 206000)}
+2018-02-05 15:51:22 [scrapy.core.engine] INFO: Spider closed (finished)

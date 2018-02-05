@@ -11,7 +11,15 @@ import scrapy
 class AmazonspiderItem(scrapy.Item):
 	# define the fields for your item here like:
 	# name = scrapy.Field()
+	# def __init__(self, unique_id, *args, **kwargs):
+	# 	self.unique_id = unique_id
+	# @classmethod
+	# def from_crawler(cls, crawler):
+	# 	return cls(
+	# 		unique_id=crawler.settings.get('unique_id'), # this will be passed from django view
+	# 		)
 	platform  = scrapy.Field()
+	unique_id  = scrapy.Field()
 	url = scrapy.Field()
 	timestamp = scrapy.Field()
 	metadata = scrapy.Field()

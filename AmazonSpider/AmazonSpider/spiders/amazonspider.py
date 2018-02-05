@@ -3,7 +3,7 @@ import scrapy
 from datetime import datetime
 from AmazonSpider.items import AmazonspiderItem,AmazonspiderMetaData
 from scrapy.loader import ItemLoader
-
+from scrapy.conf import settings
 
 class AmazonspiderSpider(scrapy.Spider):
 	name = 'amazonspider'
@@ -11,9 +11,18 @@ class AmazonspiderSpider(scrapy.Spider):
 	start_urls = ['https://www.amazon.com/Amazon-Echo-Dot-Portable-Bluetooth-Speaker-with-Alexa-Black/dp/B01DFKC2SO/',
 				'https://www.amazon.com/Bose-SoundLink-Bluetooth-Discontinued-Manufacturer/dp/B00D5Q75RC/',
 				'https://www.amazon.com/Belker-Headphone-Adapter-Connector-Microphone/dp/B071YDG983/']
+	
 
-	# def __init__(self,urls='https://www.amazon.com/Amazon-Echo-Dot-Portable-Bluetooth-Speaker-with-Alexa-Black/dp/B01DFKC2SO/'):
-	# 	self.start_urls = urls
+	def __init__(self, *args, **kwargs):
+		# self.domain = kwargs.get('domain')
+		self.start_urls = [kwargs.get('url','https://www.amazon.com/Belker-Headphone-Adapter-Connector-Microphone/dp/B071YDG983/')]
+		# self.start_urls = urls
+		
+		self.unique_id = settings['unique_id']
+		print("==============")
+		print(self.unique_id)
+		print("==============")
+		super(AmazonspiderSpider, self).__init__(*args, **kwargs)
 
 	def parse(self, response):
 		# name = response.xpath('//span[@id="productTitle"]/text()').extract_first()
@@ -58,6 +67,8 @@ class AmazonspiderSpider(scrapy.Spider):
 		l.add_value("platform",platform)
 		l.add_value("timestamp",timestamp)
 		l.add_value("url",url)
+		l.add_value("unique_id",self.unique_id)
+		
 		
 		l2.add_value("name",name)
 		l2.add_value("seller",seller)
